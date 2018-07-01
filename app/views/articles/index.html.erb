@@ -1,0 +1,21 @@
+<h1>All Posts</h1>
+<hr>
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+		<th>Read More</th>
+		<th>Edit Post</th>
+		<th>Delete</th>
+	</tr>
+<%@articles.each do |article|%>
+	<tr>
+		<td><%=article.title%></td>
+  	<td><%=article.description%></td>
+		<td><%= link_to "More",article_path(article)%></td>
+		<td><%= link_to "Edit",edit_article_path(article)%></td>
+		<td><%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+	</tr>
+<%end%>
+</table>
+<%= link_to "Add Post",new_article_path%>
