@@ -1,0 +1,16 @@
+<%if @article.errors.any?%>
+<h3>Please try again : </h3>
+<ul>
+	<%@article.errors.full_messages.each do |msg|%>
+		<li><%=msg%></li>
+	<%end%>
+</ul>
+<%end%>
+<%= form_for @article do |f|%>
+	<div><%= f.label :title%></div>
+	<%=f.text_field :title%>
+	<div><%=f.label :description%></div>
+	<%=f.text_area :description%>
+	<div><%=f.submit%></div>
+<%end%>
+<%= link_to "All Posts",articles_path%>
