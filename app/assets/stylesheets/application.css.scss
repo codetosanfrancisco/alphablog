@@ -1,0 +1,60 @@
+$navbar-default-bg:#08088A;
+$navbar-default-link-hover-bg:"transparent";
+$navbar-default-link-color:#fff;
+$navbar-default-link-hover-color:#000000;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo{
+	float:left;
+	font-size:1.7em;
+	color:#fff;
+	text-transform:uppercase;
+	letter-spacing:-1px;
+	font-weight:bold
+}
+.center{
+	text-align:center;
+}
+
+.jumbotron{
+	background-image:url("ball-field-football-47730.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	height:550px;
+	position:relative;
+}
+
+.jumbotron h1{
+	color:#000000;
+	font-weight:bold;
+	margin-bottom:30px;
+	letter-spacing:-1px;
+}
+
+.vertical-align{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translatex(-50%) translatey(-50%)
+}
+
+footer{
+	margin-top:45px;
+	padding-top:5px;
+	border-top:1px solid #eaeaea;
+	color:#777;
+}
+
+footer a:hover{
+	color:#222;
+}
+
+footer small{
+	float:left;
+}
+
+footer ul{
+	float:right;
+	list-style:none;
+}
