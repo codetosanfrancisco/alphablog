@@ -1,13 +1,4 @@
-<%if @article.errors.any?%>
-<div class="col-xs-8 col-xs-offset-2">
-	<div class="panel panel-dangert">
-		<div class="panel-heading"><h3>Please Try Again : </h3></div>
-		<%@article.errors.full_messages.each do |msg|%>
-					<div class="panel-body"><%=msg%></div>
-		<%end%>
-	</div>
-</div>
-<%end%>
+<%= render "shared/error",obj:@article %>
 <div class="row">
 	<div class="col-md-12">
 		<%= form_for(@article,:html => {class:"form-horizontal",role:"form"}) do |f|%>

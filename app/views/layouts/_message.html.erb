@@ -1,5 +1,8 @@
-<%flash.each do |attr,msg|%>
-			<div>
-				<%=msg%>
-			</div>
-<%end%>
+<div class="col-xs-10 col-xs-offset-1">
+	<%flash.each do |attr,msg|%>
+					<div class="alert alert-<%=attr%> alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<div><%=msg%></div>
+					</div>
+	<%end%>
+</div>
