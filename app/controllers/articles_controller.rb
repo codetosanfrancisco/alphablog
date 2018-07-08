@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
 		@article = Article.new
 	end
 	def create
+		#You just create the object here
 		@article = Article.new(article_params)
 		@article.user = User.all.first
 		if @article.save
